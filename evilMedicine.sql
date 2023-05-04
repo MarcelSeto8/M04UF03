@@ -66,17 +66,17 @@ FOREIGN KEY (id_diagnosis) REFERENCES diagnoses(id_diagnosis),
 FOREIGN KEY (id_medicine) REFERENCES medicines(id_medicine)
 );
 
-INSERT INTO users (username, password, password_hash_md5, first_name, last_name, email, date_of_birth) VALUES ('user1', 'password1', 'password_hash_md5_1', 'John', 'Doe', 'johndoe@example.com', '1990-01-01');
-INSERT INTO users (username, password, password_hash_md5, first_name, last_name, email, date_of_birth) VALUES ('user2', 'password2', 'password_hash_md5_2', 'Jane', 'Doe', 'janedoe@example.com', '1990-01-02');
-INSERT INTO users (username, password, password_hash_md5, first_name, last_name, email, date_of_birth) VALUES ('user3', 'password3', 'password_hash_md5_3', 'Bob', 'Smith', 'bobsmith@example.com', '1990-01-03');
+INSERT INTO users (username, password, password_hash_md5, first_name, last_name, email, date_of_birth) VALUES ('redmanolo', 'manolin123', 'password_hash_md5_1', 'Manolo', 'Tanos', 'manolin@example.com', '2004-01-01');
+INSERT INTO users (username, password, password_hash_md5, first_name, last_name, email, date_of_birth) VALUES ('robertapamela', 'robertita4', 'password_hash_md5_2', 'Roberta', 'Sinclaire', 'roberta@example.com', '1999-11-02');
+INSERT INTO users (username, password, password_hash_md5, first_name, last_name, email, date_of_birth) VALUES ('concha', 'conchadetumadre', 'password_hash_md5_3', 'Conchita', 'Bandida', 'laconchi@example.com', '2008-01-13');
 
 INSERT INTO doctors (doctor) VALUES ('Dr. John');
 INSERT INTO doctors (doctor) VALUES ('Dr. Marcel');
 
-INSERT INTO medicines (medicine,cost,price) VALUES ('Medicine A', 10.00 , 20.00);
-INSERT INTO medicines (medicine,cost,price) VALUES ('Medicine B', 20.00 , 30.00);
-INSERT INTO medicines (medicine,cost,price) VALUES ('Medicine C', 30.00 , 40.00);
-INSERT INTO medicines (medicine,cost,price) VALUES ('Medicine D', 40.00 , 50.00);
+INSERT INTO medicines (medicine,cost,price) VALUES ('Ibuprofeno', 10.00 , 20.00);
+INSERT INTO medicines (medicine,cost,price) VALUES ('Diacepan', 19.00 , 27.40);
+INSERT INTO medicines (medicine,cost,price) VALUES ('Cremitas anti hongos', 240.00 , 550.00);
+INSERT INTO medicines (medicine,cost,price) VALUES ('Rinomer', 5.00 , 12.34);
 
 INSERT INTO conditions (condicion,symptoms,description,deadly) VALUES ('Condition A','Symptom A','Description A',false);
 INSERT INTO conditions (condicion,symptoms,description,deadly) VALUES ('Condition B','Symptom B','Description B',true);
@@ -86,13 +86,13 @@ INSERT INTO conditions (condicion,symptoms,description,deadly) VALUES ('Conditio
 INSERT INTO conditions (condicion,symptoms,description,deadly) VALUES ('Condition F','Symptom F','Description F',true);
 
 INSERT INTO diagnoses (diagnosis, datetime, id_doctor, id_user, id_condition) 
-VALUES ('Cagarrinas', '2023-05-03 13:00:00', 1, 1, 1);
+VALUES ('Retorcijones', '2023-05-03 13:00:00', 2, 1, 1);
 INSERT INTO diagnoses (diagnosis, datetime, id_doctor, id_user, id_condition) 
-VALUES ('Cancer', '2023-05-03 13:00:00', 1, 1, 1);
+VALUES ('Nariz Taponada', '2023-05-03 13:00:00', 1, 2, 1);
 INSERT INTO diagnoses (diagnosis, datetime, id_doctor, id_user, id_condition) 
 VALUES ('Fimosis', '2023-05-03 13:00:00', 1, 1, 1);
 INSERT INTO diagnoses (diagnosis, datetime, id_doctor, id_user, id_condition) 
-VALUES ('Gripe alonistican', '2023-05-03 13:00:00', 1, 1, 1);
+VALUES ('Covid-23', '2023-05-03 13:00:00', 2, 3, 1);
 
 INSERT INTO treatments (id_condition, id_diagnosis, id_medicine) 
 VALUES (1, 1, 1);
