@@ -123,3 +123,13 @@ VALUES
 	(3, 3, 3, 3, 3, 3),
 	(4, 4, 4, 4, 4, 4),
 	(5, 5, 5, 5, 5, 5);
+
+INSERT INTO users_adresses(id_user, id_adress)
+VALUES
+	(1, 1), (2, 2), (3, 3), (4, 4), (5, 5);
+
+INSERT INTO users_planets (id_user, id_planet)
+VALUES
+	(1, 1), (2, 2), (3, 3), (4, 4), (5, 5);
+
+
