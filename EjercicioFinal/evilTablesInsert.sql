@@ -4,7 +4,11 @@ VALUES
 	('marcel8', 'marcelito123', 'marcel.seto@enti.cat', 'Marcel'),
 	('pablo21', 'pablitosocias', 'pablo.lopez@enti.cat', 'Pablo'),
 	('johnK', 'johnasa12', 'john.largao@enti.cat', 'John'),
-	('guillermojazz', 'saxofon21', 'guillem.agutllo@enti.cat', 'Guillem');
+	('guillermojazz', 'saxofon21', 'guillem.agutllo@enti.cat', 'Guillem'),
+	('juanramon12', 'juanrapapu', 'juan.ramon@enti.cat', 'Juan'),
+	('franciscana09','francisca12', 'francisca.moya@enti.cat', 'Francisca'),
+	('micaela4', 'micapica', 'micaela.papu@enti.cat', 'Micaela'),
+	('estefi45', 'estefipiti', 'estefania.garfia@enti.cat', 'Estefania');
 
 INSERT INTO diseases(disease, symptoms, description, deadly)
 VALUES 
@@ -130,6 +134,6 @@ VALUES
 
 INSERT INTO users_planets (id_user, id_planet)
 VALUES
-	(1, 1), (2, 2), (3, 3), (4, 4), (5, 5);
+	(1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 4), (7, 1), (8, 4), (9, 5);
 
 
