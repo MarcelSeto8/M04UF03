@@ -21,7 +21,6 @@ def randomPerrito():
 		img = image.Image(image_name)
 		print(img)
 
-	print(info_perro)  
         
 def listRaces():
 	api_url = "https://dog.ceo/api/breeds/list/all"
@@ -34,7 +33,6 @@ def listRaces():
 
 	for p in perro:
 		list_perritos.append(p)
-#		print(p)
 
 	conocerPerritos = input ("¿Quieres conocer a los perritos lindos?[y/n]: ")
 	count = 0
@@ -68,7 +66,6 @@ def elijaSuPerrito():
 		img = image.Image(image_name)
 		print(img)
 
-	#print(info_perro)
 		
 def elijaSuPerritoTresImagenes():
 	
@@ -86,9 +83,60 @@ def elijaSuPerritoTresImagenes():
 			handler.write(images)
 			img = image.Image(image_name)
 			print(img)
-			time.sleep(5)
+			time.sleep(8)
 
-listRaces()
+
+
+if __name__ == "__main__":
+	os.system("clear")	
+	print("--------------------------------------")
+	print("¡Bienvenido al mundo de los PERRITOS!")
+	print("--------------------------------------")
+	time.sleep(4)
+	os.system("clear")
+
+	while True:
+		print("--------------------------------------")
+		print("OPCIONES: ")
+		print("[1]. IMAGEN RANDOM DE UN PERRITO")
+		print("[2]. LISTA TODAS LAS RAZAS DE PERRITOS")
+		print("[3]. ESCRIBE LA RAZA QUE QUIERAS VER - 1 IMAGEN")
+		print("[4]. ESCRIBE LA RAZA QUE QUIERAS VER - 3 IMAGENES")
+		print("[5]. EXIT")
+		print("--------------------------------------")
+		optionMenu = input("Escriba la opción deseada: ")
+		os.system("clear")
+
+		if optionMenu == "1":
+			randomPerrito()
+			time.sleep(8)
+			os.system("clear")
 	
-        
-    
+		elif optionMenu == "2":
+			listRaces()
+			os.system("clear")
+		
+		elif optionMenu == "3":
+			elijaSuPerrito()
+			time.sleep(8)
+			os.system("clear")
+
+		elif optionMenu == "4":
+			elijaSuPerritoTresImagenes()
+			os.system("clear")
+
+		elif optionMenu == "5":
+			print("---------------------------------------")
+			print("¡Vuelve pronto los perritos te esperan!")
+			print("---------------------------------------")
+			time.sleep(4)
+			os.system("clear")
+			break
+
+		else:
+			print("--------------------------------------------------")
+			print("El numero digitado no corresponde a ninguna opción")
+			print("--------------------------------------------------")
+			time.sleep(3)
+			os.system("clear")
+			continue
