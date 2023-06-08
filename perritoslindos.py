@@ -88,8 +88,7 @@ def elijaSuPerritoTresImagenes():
 			print(img)
 			time.sleep(5)
 
-elijaSuPerritoTresImagenes()
-
+listRaces()
 	
         
     
