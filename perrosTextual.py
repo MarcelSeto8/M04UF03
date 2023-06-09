@@ -1,9 +1,11 @@
 #!/usr/bin/python
 import requests
 import time
+from fabulous import utils, image
 from textual.app import App, ComposeResult
 from textual.widgets import Label, Button
 from textual import events
+import webbrowser
 global list_perritos
 list_perritos = []
 
@@ -36,8 +38,22 @@ class HelloWorld(App):
 			list_perritos.append(p)
 
 		
-		#game_dogs_list = ", ".join(list_perritos)
+	def randomPerrito(self):
+		api_url = "https://dog.ceo/api/breeds/image/random"
 
+		response = requests.get(api_url)
+
+		if response.status_code == 200:
+			info_perro = (response.json())
+			perro = info_perro['message']
+
+			images = requests.get(perro).content
+			image_name = "perrito.png"
+
+			with open(image_name, "wb") as handler:
+				handler.write(images)
+				img = image.Image(image_name)
+				webbrowser.open(image_name)
 	
 	def on_button_pressed(self, event: Button.Pressed) -> None:
 		if event.button.id == "list_dogs":
@@ -52,6 +68,9 @@ class HelloWorld(App):
 		if event.button.id == "vaciar_list":
 			self.list_dogs_empty.update("")
 		
+		if event.button.id == "next_dog":
+			self.randomPerrito()
+
 		if event.button.id == "close":
 			self.exit(event.button.id)
 
