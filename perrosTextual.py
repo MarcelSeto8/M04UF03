@@ -9,9 +9,10 @@ import webbrowser
 global list_perritos
 list_perritos = []
 
-class HelloWorld(App):
+class Cachorreria(App):
 	
-	
+	CSS_PATH = "style.css"
+		
 	def compose(self) -> ComposeResult:
 		self.close_button = Button("Exit", id = "close")
 		self.list_dogs = Button("List Dogs", id = "list_dogs")
@@ -54,7 +55,13 @@ class HelloWorld(App):
 				handler.write(images)
 				img = image.Image(image_name)
 				webbrowser.open(image_name)
-	
+
+
+	def on_mount(self) -> None:
+		self.screen.styles.background = "darkblue"
+		self.close_button.styles.background = "red"
+
+
 	def on_button_pressed(self, event: Button.Pressed) -> None:
 		if event.button.id == "list_dogs":
 			self.listRaces()
@@ -75,5 +82,5 @@ class HelloWorld(App):
 			self.exit(event.button.id)
 
 if __name__ == "__main__":
-	app = HelloWorld()
+	app = Cachorreria()
 	app.run()
